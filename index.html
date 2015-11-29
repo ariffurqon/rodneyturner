@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app = "rodney">
 <head>
-  <title>Rodney Turner</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Rodney Turner, Inc.</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript" src="app.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<h1>Rodney Turner</h1> 
-<p>Principal at RWT Consulting, Inc.</p> 
+    <div ng-view ng-controller="MainCtrl"></div>
 
 </body>
 </html>
