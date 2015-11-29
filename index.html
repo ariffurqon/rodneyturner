@@ -17,8 +17,10 @@
 
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div ng-view ng-controller="MainCtrl"></div>
-
+<body ng-controller="MainCtrl">
+    <!-- Our Website Content Goes Here -->
+    <div ng-include='"templates/header.html"'></div>
+    <div ng-view></div>
+    <div ng-include='"templates/footer.html"'></div>
 </body>
 </html>
