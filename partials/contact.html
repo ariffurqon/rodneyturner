@@ -1,42 +1,54 @@
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>We would love to hear from you..</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> San Francisco, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1415151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> email@something.com</p>	   
-    </div>
 
     <!-- form to submit the email -->
-    <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbysEpgNhSX8FtnygSQjSmaWNw9Y2jLXO9dNqLXKk4Mxa1IVlx0/exec">
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="What your Mom calls you.." type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-          <span id="email-invalid" style="visibility:hidden">Must be a valid email address</span>
-        </div>
+    <!-- <div class="panel panel-default">
+        <div class="panel-heading">
+        <h3 class="panel-title">Let's work together...</h3>
       </div>
-      <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>	
-    </div>
-    </form>
+      <div class="panel-body"> -->
+        <form action="//formspree.io/tellyourbfthanks@gmail.com"  method="POST">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="firstname">Firt Name:</label>
+                <input type="text" class="form-control" id="firstname" placeholder="First Name" name"firstname">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" name="_replyto">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="phone">Phone (optional):</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Phone">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" rows="3" id="message" placeholder="Type your message here..."></textarea>
+          </div>
+          <div class="form-group pull-right">
+            <button type="submit" value="Send"class="btn btn-default btn-lg">Submit</button>
+          </div>
+        </form>
+      <!-- </div>
+    </div> -->
 
-  </div>
 </div>
 
-<!-- Customise the Thankyou Message People See when they submit the form: -->
-  <div style="display:none;" id="thankyou_message">
-    <h2><em>Thanks</em> for contacting us!
-      We will get back to you soon!</h2>
-  </div>
 
 
