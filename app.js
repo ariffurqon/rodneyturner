@@ -1,4 +1,4 @@
-var app = angular.module('rodney', ['ngRoute', 'ajoslin.promise-tracker']);
+var app = angular.module('rodney', ['ngRoute']);
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
