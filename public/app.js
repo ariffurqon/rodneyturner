@@ -4,27 +4,27 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     $routeProvider
         //homepage
         .when('/', {
-            templateUrl: 'partials/home.html',
+            templateUrl: 'views/partials/home.html',
             controller: 'MainCtrl'
         })
 
         .when('/services', {
-            templateUrl: 'partials/services.html',
+            templateUrl: 'views/partials/services.html',
             controller: 'MainCtrl'
         })
 
         .when('/portfolio', {
-            templateUrl: 'partials/portfolio.html',
+            templateUrl: 'views/partials/portfolio.html',
             controller: 'MainCtrl'
         })
 
         .when('/about', {
-            templateUrl: 'partials/about.html',
+            templateUrl: 'views/partials/about.html',
             controller: 'MainCtrl'
         })
 
         .when('/contact', {
-            templateUrl: 'partials/contact.html',
+            templateUrl: 'views/partials/contact.html',
             controller: 'MainCtrl'
         })
 

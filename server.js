@@ -17,11 +17,11 @@ mongoose.connect(
 );
 
 // set the static files location 
-app.use(express.static(__dirname + '/')); 
+app.use(express.static(__dirname + '/public')); 
 
 // load our public/index.html file
 app.get('*', function(req, res) {
-    res.sendFile(__dirname + 'index.html'); 
+    res.sendFile(__dirname + '/public/views/index.html'); 
 });
 
 // listen on port 3000
