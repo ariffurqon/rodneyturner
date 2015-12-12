@@ -3,52 +3,51 @@
   <h2 class="text-center">CONTACT</h2>
 
     <!-- form to submit the email -->
-    <!-- <div class="panel panel-default">
-        <div class="panel-heading">
-        <h3 class="panel-title">Let's work together...</h3>
-      </div>
-      <div class="panel-body"> -->
-        <form action="//formspree.io/tellyourbfthanks@gmail.com"  method="POST">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="firstname">Firt Name:</label>
-                <input type="text" class="form-control" id="firstname" placeholder="First Name" name"firstname">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="lastname">Last Name:</label>
-                <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Email" name="_replyto">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="phone">Phone (optional):</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Phone">
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea class="form-control" rows="3" id="message" placeholder="Type your message here..."></textarea>
-          </div>
-          <div class="form-group pull-right">
-            <button type="submit" value="Send"class="btn btn-default btn-lg">Submit</button>
-          </div>
-        </form>
-      <!-- </div>
-    </div> -->
+<!--         <form id="myform" action="https://script.google.com/macros/s/AKfycbysEpgNhSX8FtnygSQjSmaWNw9Y2jLXO9dNqLXKk4Mxa1IVlx0/exec"  method="POST">
+           -->
+
+
+  <div data-ng-controller="help">
+      <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
+      <div data-ng-show="progress.active()" style="color: red; font-size: 50px;">Sending&hellip;</div>
+      <form name="helpForm" novalidate role="form">
+        <div class="form-group">
+          <label for="name">Your Name </label>
+          <span class="label label-danger" data-ng-show="submitted && helpForm.name.$error.required">Required!</span>
+          <input type="text" name="name" data-ng-model="name" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your E-mail address</label>
+          <span class="label label-danger" data-ng-show="submitted && helpForm.email.$error.required">Required!</span>
+          <span class="label label-danger" data-ng-show="submitted && helpForm.$error.email">Invalid email!</span>
+          <input type="email" name="email" data-ng-model="email" class="form-control" required />  
+        </div>
+
+       <!--  <div class="form-group">
+          <label for="subjectList">What is the nature of your request?</label>
+          <span class="label label-danger" data-ng-show="submitted && helpForm.subjectList.$error.required">Required!</span>
+          <select name="subjectList" data-ng-model="subjectList" data-ng-options="id as value for (id, value) in subjectListOptions" class="form-control" required>
+            <option value=""></option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Your company url</label>
+          <span class="label label-danger" data-ng-show="submitted && helpForm.$error.url">Invalid URL format!</span>
+          <input type="url" name="url" data-ng-model="url" class="form-control" />
+        </div> -->
+
+        <div class="form-group">
+          <label for="comments">Description</label>
+          <span class="label label-danger" data-ng-show="submitted && helpForm.comments.$error.required">Required!</span>
+          <textarea name="comments" data-ng-model="comments" class="form-control" required></textarea>
+        </div>
+
+        <button data-ng-disabled="progress.active()" data-ng-click="submit(helpForm)" class="btn btn-default">Submit</button>
+      </form>
+    </div>
 
 </div>
-
 
 
