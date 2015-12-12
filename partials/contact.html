@@ -1,53 +1,27 @@
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<div class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
-
-    <!-- form to submit the email -->
-<!--         <form id="myform" action="https://script.google.com/macros/s/AKfycbysEpgNhSX8FtnygSQjSmaWNw9Y2jLXO9dNqLXKk4Mxa1IVlx0/exec"  method="POST">
-           -->
-
-
-  <div data-ng-controller="help">
-      <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
-      <div data-ng-show="progress.active()" style="color: red; font-size: 50px;">Sending&hellip;</div>
-      <form name="helpForm" novalidate role="form">
-        <div class="form-group">
-          <label for="name">Your Name </label>
-          <span class="label label-danger" data-ng-show="submitted && helpForm.name.$error.required">Required!</span>
-          <input type="text" name="name" data-ng-model="name" class="form-control" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Your E-mail address</label>
-          <span class="label label-danger" data-ng-show="submitted && helpForm.email.$error.required">Required!</span>
-          <span class="label label-danger" data-ng-show="submitted && helpForm.$error.email">Invalid email!</span>
-          <input type="email" name="email" data-ng-model="email" class="form-control" required />  
-        </div>
-
-       <!--  <div class="form-group">
-          <label for="subjectList">What is the nature of your request?</label>
-          <span class="label label-danger" data-ng-show="submitted && helpForm.subjectList.$error.required">Required!</span>
-          <select name="subjectList" data-ng-model="subjectList" data-ng-options="id as value for (id, value) in subjectListOptions" class="form-control" required>
-            <option value=""></option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="url">Your company url</label>
-          <span class="label label-danger" data-ng-show="submitted && helpForm.$error.url">Invalid URL format!</span>
-          <input type="url" name="url" data-ng-model="url" class="form-control" />
-        </div> -->
-
-        <div class="form-group">
-          <label for="comments">Description</label>
-          <span class="label label-danger" data-ng-show="submitted && helpForm.comments.$error.required">Required!</span>
-          <textarea name="comments" data-ng-model="comments" class="form-control" required></textarea>
-        </div>
-
-        <button data-ng-disabled="progress.active()" data-ng-click="submit(helpForm)" class="btn btn-default">Submit</button>
-      </form>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> 
     </div>
-
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
 </div>
-
-
