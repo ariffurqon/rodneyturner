@@ -3,7 +3,6 @@
 // require express and other modules
 var express = require('express'),
 	app = express(),
-	ecstatic = require('ecstatic');
 	bodyParser = require('body-parser'),
 	mongoose = require('mongoose');
 
