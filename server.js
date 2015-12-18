@@ -3,6 +3,7 @@
 // require express and other modules
 var express = require('express'),
 	app = express(),
+	ecstatic = require('ecstatic');
 	bodyParser = require('body-parser'),
 	mongoose = require('mongoose');
 
@@ -17,11 +18,11 @@ mongoose.connect(
 );
 
 // set the static files location 
-app.use(express.static(__dirname + '/public')); 
+app.use(express.static(__dirname + '/')); 
 
 // load our public/index.html file
 app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/public/views/index.html'); 
+    res.sendFile(__dirname + 'index.html'); 
 });
 
 // listen on port 3000
