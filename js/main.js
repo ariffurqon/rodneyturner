@@ -10,17 +10,14 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
   $routeProvider
     // Home
     .when("/", {
-      templateUrl: "partials/home.html", 
+      templateUrl: "partials/who.html", 
       controller: "PageCtrl"})
     // Pages
-    .when("/recentworks", {
-      templateUrl: "partials/recentworks.html", 
+    .when("/what", {
+      templateUrl: "partials/what.html", 
       controller: "PageCtrl"})
-    .when("/mypassion", {
-      templateUrl: "partials/mypassion.html", 
-      controller: "PageCtrl"})
-    .when("/about", {
-      templateUrl: "partials/about.html", 
+    .when("/where", {
+      templateUrl: "partials/where.html", 
       controller: "PageCtrl"})
     .when("/contact", {
       templateUrl: "partials/contact.html", 
