@@ -6,7 +6,7 @@ var app = angular.module('rodney', ['ngRoute', 'ui.bootstrap']);
 /**
  * Configure the Routes
  */
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
     .when("/", {
@@ -26,11 +26,6 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
       redirectTo: '/'
     });
 
-    //remove the hash and make pretty URLs
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-    });
 }]);
 
 app.controller('PageCtrl', function ($scope, $location, $http) {
